@@ -1,0 +1,84 @@
+body {
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+.container {
+  width: 800px;
+  margin: 50px auto;
+  background: linear-gradient(
+    109.6deg,
+    rgb(17, 151, 147) 11.2%,
+    rgb(154, 214, 212) 55.4%,
+    rgb(255, 233, 171) 100.2%
+  );
+  border-radius: 20px;
+}
+.city {
+  font-size: 30px;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+}
+span {
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0%;
+}
+.number {
+  text-align: center;
+}
+.emoji {
+  font-size: 64px;
+}
+.temp {
+  text-align: center;
+  color: beige;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  top: -34px;
+}
+p {
+  text-align: center;
+  font-size: medium;
+  font-style: italic;
+}
+ul {
+  text-align: right;
+  text-decoration: none;
+  list-style: none;
+}
+.info {
+  font-size: large;
+  font-weight: 600;
+  text-align: center;
+}
+.sun {
+  display: block;
+  text-align: center;
+  font-size: 700;
+  font-weight: 900;
+  width: 600;
+}
+.temperature {
+  font-size: medium;
+  font-style: normal;
+  text-align: left;
+}
+br {
+  font-size: small;
+  font-weight: 200;
+}
+footer {
+  text-align: center;
+  font-size: small;
+  font-style: italic;
+  color: #fff;
+  margin-top: 12px;
+}
