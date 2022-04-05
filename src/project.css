@@ -6,9 +6,6 @@ body {
   color: #000;
 }
 .container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: ;
   background: linear-gradient(
     109.6deg,
     rgb(17, 151, 147) 11.2%,
@@ -17,6 +14,10 @@ body {
   );
   border: 1px solid #000;
   border-radius: 20px;
+}
+.weather-app{
+  max-width: 800px;
+  margin: 30px auto;
 }
 .first {
   text-align: left;
@@ -76,9 +77,8 @@ br {
   font-weight: 200;
 }
 footer {
-  text-align: center;
   font-size: small;
   font-style: italic;
-  color: #fff;
+  color: #000;
   margin-top: 12px;
 }
