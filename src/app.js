@@ -1,4 +1,5 @@
-let now = new Date();
+function formatDate(timestamp){
+let now = new Date(timestamp);
 let days = ["Sun", "Mon", "Wed", "Thurs", "Fri", "Sat"];
 let day = days[now.getDay()];
 let hours = now.getHours();
@@ -10,8 +11,8 @@ if (hours < 10) {
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-let span = document.querySelector(".date");
-span.innerHTML = `${day} ${date} ${hours}:${minutes}`;
+return `${day} ${hours}: ${minutes}` ;
+}
 
 function showWeatherCondition(response) {
   document.querySelector(".city").innerHTML = response.data.name;
@@ -25,6 +26,7 @@ function showWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+    document.querySelector(".date").innerHTML = formatDate(response.data.dt * 1000);
 }
 function handleSubmit(event) {
   event.preventDefault();
