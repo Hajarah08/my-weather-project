@@ -49,6 +49,7 @@ p {
   text-align: center;
   font-size: medium;
   font-style: italic;
+  text-transform: capitalize;
 }
 ul {
   text-align: right;
