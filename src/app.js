@@ -50,6 +50,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function showFahrenheitTemperature(event){
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   
   let temperatureElement = document.querySelector(".temp");
@@ -57,6 +59,8 @@ function showFahrenheitTemperature(event){
 }
 function showCelsiusTemperature(event){
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }

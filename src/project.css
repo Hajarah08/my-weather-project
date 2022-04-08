@@ -79,3 +79,9 @@ footer {
   color: #000;
   margin-top: 12px;
 }
+.number .active{
+color: #000;
+cursor: default;
+}
+.number .active:hover{
+  text-decoration: none;
