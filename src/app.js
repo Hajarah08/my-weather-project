@@ -19,6 +19,7 @@ function showWeatherCondition(response) {
   document.querySelector(".temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = response.data.main.temp ;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -29,6 +30,8 @@ function showWeatherCondition(response) {
     document.querySelector(".date").innerHTML = formatDate(response.data.dt * 1000);
     document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
+
+
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -42,5 +45,28 @@ function searchCity(city) {
 
 let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", handleSubmit);
+
+
+
+function showFahrenheitTemperature(event){
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  
+  let temperatureElement = document.querySelector(".temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
+}
+function showCelsiusTemperature(event){
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
 
 searchCity("Lagos");
