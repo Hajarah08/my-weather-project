@@ -1,6 +1,6 @@
 function formatDate(timestamp){
 let now = new Date(timestamp);
-let days = ["Sun", "Mon", "Wed", "Thurs", "Fri", "Sat"];
+let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 let day = days[now.getDay()];
 let hours = now.getHours();
 let minutes = now.getMinutes();
@@ -11,7 +11,29 @@ if (hours < 10) {
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-return `${day} ${hours}: ${minutes}` ;
+return `${day}, ${hours}: ${minutes}` ;
+}
+
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast"); 
+  let forecastHTML =`<div class = "row">`;
+  let days = ["Sat", "Sun", "Mon", "Tues", "Wed",];
+  days.forEach(function(day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  
+        <div class="col">
+          ${day}
+          <br/>  ⛈️
+          <br /> 33℃
+        </div> `;
+
+  });
+  
+
+forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showWeatherCondition(response) {
@@ -72,5 +94,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-
+displayForecast();
 searchCity("Lagos");

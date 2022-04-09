@@ -82,6 +82,8 @@ footer {
 .number .active{
 color: #000;
 cursor: default;
+text-decoration: none;
 }
 .number .active:hover{
-  text-decoration: none;
+  text-decoration: none ;
+}
