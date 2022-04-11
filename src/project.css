@@ -12,7 +12,7 @@ body {
     rgb(154, 214, 212) 55.4%,
     rgb(255, 233, 171) 100.2%
   );
-  border: 1px solid #000;
+  border: none;
   border-radius: 20px;
 }
 .weather-app{
@@ -86,4 +86,8 @@ text-decoration: none;
 }
 .number .active:hover{
   text-decoration: none ;
+}
+.update {
+  font-size: small;
+  font-style: italic;
 }

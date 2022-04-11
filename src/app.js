@@ -5,13 +5,16 @@ let day = days[now.getDay()];
 let hours = now.getHours();
 let minutes = now.getMinutes();
 let date = now.getDate();
+let years = now.getFullYear();
+let months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+let month = months[now.getMonth()];
 if (hours < 10) {
   hours = `0${hours}`;
 }
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-return `${day}, ${hours}: ${minutes}` ;
+return `${month} ${date}, ${years} ${hours}: ${minutes}` ;
 }
 
 function formatDay(timestamp){
